@@ -1,0 +1,14 @@
+body{font-family:Segoe UI,Arial,sans-serif;margin:0;background:#f5f6fa;color:#222}
+nav{background:#1f3a5f;color:#fff;padding:12px 24px;display:flex;gap:18px;align-items:center}
+nav a{color:#fff;text-decoration:none} nav .sp{flex:1} nav b{font-size:1.2em}
+main{max-width:1000px;margin:24px auto;padding:0 16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+.card{background:#fff;border-radius:8px;padding:14px;box-shadow:0 1px 4px #0002}
+.card h3{margin:0 0 6px} .prix{color:#c0392b;font-weight:bold}
+.btn{display:inline-block;background:#1f3a5f;color:#fff;border:0;border-radius:4px;padding:6px 12px;text-decoration:none;cursor:pointer}
+.btn.red{background:#c0392b} .btn.grey{background:#888}
+table{width:100%;border-collapse:collapse;background:#fff}
+th,td{padding:8px;border-bottom:1px solid #ddd;text-align:left}
+form.box{background:#fff;padding:18px;border-radius:8px;max-width:460px}
+form.box input,form.box select,form.box textarea{width:100%;padding:7px;margin:4px 0 12px;box-sizing:border-box}
+.err{color:#c0392b;margin-bottom:10px}

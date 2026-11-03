@@ -1,0 +1,21 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<nav>
+  <b>🛒 E-Shop</b>
+  <a href="${pageContext.request.contextPath}/ProduitServlet?action=lister">Vitrine</a>
+  <a href="${pageContext.request.contextPath}/ProduitServlet?action=nouveau">+ Produit</a>
+  <span class="sp"></span>
+  <c:choose>
+    <c:when test="${not empty sessionScope.internaute}">
+      <a href="${pageContext.request.contextPath}/PanierServlet?action=afficher">Mon panier</a>
+      <a href="${pageContext.request.contextPath}/InternauteServlet?action=profil">${sessionScope.internaute.prenom} ${sessionScope.internaute.nom}</a>
+      <a href="${pageContext.request.contextPath}/InternauteServlet?action=deconnecter">Déconnexion</a>
+    </c:when>
+    <c:otherwise>
+      <a href="${pageContext.request.contextPath}/InternauteServlet?action=formLogin">Connexion</a>
+      <a href="${pageContext.request.contextPath}/InternauteServlet?action=formInscription">Inscription</a>
+    </c:otherwise>
+  </c:choose>
+</nav>
